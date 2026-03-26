@@ -5,6 +5,7 @@ affiliation: Microsoft Research, India
 email: sandhyasaravanan978 (at) gmail (dot) com
 
 # Search Engine Optimization (SEO)
+url: https://sandhyasaravanan99.github.io
 keywords: minimal light
 canonical: https://sandhyasaravanan99.github.io/
 description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
@@ -22,9 +23,9 @@ github_link: https://github.com/sandy9999
 linkedin: https://www.linkedin.com/in/sandhyasaravanan/
 
 # Images 
-avatar: ./assets/files/website_profile_pic.jpeg
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
+avatar: assets/files/website_profile_pic.jpeg
+favicon: assets/img/favicon.png
+favicon_dark: assets/img/favicon-dark.png
 
 # Footnotes
 enable_footnote: true
