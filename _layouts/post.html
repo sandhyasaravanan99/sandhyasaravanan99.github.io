@@ -19,11 +19,11 @@
   <body>
     <main class="post-shell">
       <a class="post-backlink" href="{{ "/blog/" | relative_url }}">Back to blog</a>
-      <header class="post-header">
+      <div class="post-header">
         <div class="post-kicker">Sandhya Saravanan</div>
         <h1>{{ page.title }}</h1>
         <div class="post-date">{{ page.date | date: "%B %-d, %Y" }}</div>
-      </header>
+      </div>
       <article class="post-content">
         {{ content }}
       </article>
