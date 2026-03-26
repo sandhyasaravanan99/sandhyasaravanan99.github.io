@@ -6,7 +6,7 @@ email: sandhyasaravanan978 (at) gmail (dot) com
 
 # Search Engine Optimization (SEO)
 keywords: minimal light
-canonical: https://minimal-light-theme-mpi-inf.yliu.me/
+canonical: https://sandhyasaravanan99.github.io/
 description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
 
 # The option is used to enable the MPI Informatics template.
@@ -35,4 +35,3 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
-  - CNAME
