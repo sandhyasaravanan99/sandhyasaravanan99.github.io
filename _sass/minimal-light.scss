@@ -259,6 +259,137 @@ h2 {
   font-size: 157%;
 }
 
+a.blog-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid #043361;
+  border-radius: 999px;
+  color: #043361;
+  text-decoration: none;
+}
+
+a.blog-link:hover {
+  background-color: #043361;
+  color: #fff;
+  text-decoration: none;
+}
+
+.blog-list {
+  margin-top: 1.5rem;
+}
+
+.blog-list-item {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(4, 51, 97, 0.14);
+}
+
+.blog-list-item:last-child {
+  border-bottom: 1px solid rgba(4, 51, 97, 0.14);
+}
+
+.blog-meta {
+  font-size: 0.95rem;
+  color: #7b7b7b;
+  margin-bottom: 0.25rem;
+}
+
+.blog-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+
+.blog-title a {
+  color: #043361;
+  text-decoration: none;
+}
+
+.blog-title a:hover {
+  text-decoration: underline;
+}
+
+.blog-excerpt {
+  margin: 0.35rem 0 0;
+}
+
+.post-shell {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.post-kicker {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7b7b7b;
+}
+
+.post-backlink {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  color: #043361;
+  text-decoration: none;
+}
+
+.post-backlink:hover {
+  text-decoration: underline;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-date {
+  font-size: 0.95rem;
+  color: #7b7b7b;
+}
+
+.post-content p,
+.post-content li {
+  font-size: 1.05rem;
+}
+
+.post-image {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  a.blog-link {
+    border-color: #3eb7f0;
+    color: #3eb7f0;
+  }
+
+  a.blog-link:hover {
+    background-color: #3eb7f0;
+    color: #20212b;
+  }
+
+  .blog-list-item {
+    border-top-color: rgba(62, 183, 240, 0.2);
+  }
+
+  .blog-list-item:last-child {
+    border-bottom-color: rgba(62, 183, 240, 0.2);
+  }
+
+  .blog-meta,
+  .post-kicker,
+  .post-date {
+    color: #b9bbc2;
+  }
+
+  .blog-title a,
+  .post-backlink {
+    color: #3eb7f0;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   h1, h3, h4, h5, h6 {
     color:rgb(62, 183, 240);

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="{{ page.summary | default: site.description }}">
+    <meta name="keywords" content="{{ site.keywords }}">
+
+    <link rel="canonical" href="{{ site.canonical }}{{ page.url | remove_first: '/' }}" />
+    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
+    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
+    <script src="{{ "/assets/js/favicon-switcher.js" | relative_url }}" type="application/javascript"></script>
+
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/pub.css" | relative_url }}">
+  </head>
+  <body>
+    <main class="post-shell">
+      <a class="post-backlink" href="{{ "/blog/" | relative_url }}">Back to blog</a>
+      <header class="post-header">
+        <div class="post-kicker">Sandhya Saravanan</div>
+        <h1>{{ page.title }}</h1>
+        <div class="post-date">{{ page.date | date: "%B %-d, %Y" }}</div>
+      </header>
+      <article class="post-content">
+        {{ content }}
+      </article>
+    </main>
+  </body>
+</html>

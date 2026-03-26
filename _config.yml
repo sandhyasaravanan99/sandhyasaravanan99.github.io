@@ -29,6 +29,15 @@ favicon_dark: ./assets/img/favicon-dark.png
 # Footnotes
 enable_footnote: true
 
+# Blog
+permalink: /blog/:year/:month/:day/:title/
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
 # The following files will be removed from the generated website.
 exclude:
   - Gemfile
