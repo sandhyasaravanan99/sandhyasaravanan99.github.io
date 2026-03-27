@@ -10,8 +10,6 @@ Earlier, I was a Research Fellow in the EzPC group, the cryptography wing of Mic
 
 Prior to joining MSR, I spent two years at Microsoft, Bengaluru as a Software Developer, where I did backend development of Actionable Messages and Connectors, integrated into Outlook and Teams. I graduated in 2021 with a B.Tech in Computer Science and Engineering.
 
-I was a part of Delta Force, the programming club of NIT Trichy that takes care of all institute and festival development activities. We conducted Pragyan Capture the Flag, where I was responsible for problem setting and platform setup in the Cryptography field.
-
 ## Research Interests
 
 - Applied Cryptography
@@ -24,7 +22,7 @@ I was a part of Delta Force, the programming club of NIT Trichy that takes care 
 
 ## Blog
 
-I occasionally write short notes on research, systems, engineering, and things I am learning.
+I occasionally write short notes on research, engineering, and things I am learning.
 
 <a class="blog-link" href="/blog/">Read the blog</a>
 
