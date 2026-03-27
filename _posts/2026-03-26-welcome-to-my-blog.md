@@ -19,7 +19,7 @@ Just a few months before beginning my PhD, I had a dream. I did not just want to
 
 I want to introduce the core ideas of cryptography intuitively, without fancy notation and without making the subject feel like it belongs only to a small elite circle. A lot of people do try to simplify cryptography, but I do not think they usually have middle schoolers in mind. Maybe that is too ambitious. But I think holding onto that ambition will keep me grounded. What is science, after all, if it cannot be communicated? If it cannot inspire children?
 
-I have grown tired of the way "mathematical maturity" is sometimes used as a gatekeeping phrase, as if wonder, curiosity, and intuition count for less than polish. I do not want cryptography to feel unreachable. I want it to feel exciting, precise, and human.
+I have grown tired of the way "mathematical maturity" is sometimes used as a gatekeeping phrase, as if wonder, curiosity, and intuition are unsophisticated notions. I do not want cryptography to feel unreachable.
 
 There are many obstacles between me and this dream. For one, I think I am actually a terrible communicator. My understanding of the field still feels scattered. My impostor syndrome makes me under-communicate and under-sell what I do.
 
