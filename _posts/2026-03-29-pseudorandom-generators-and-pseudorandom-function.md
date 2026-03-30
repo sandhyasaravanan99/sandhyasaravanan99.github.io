@@ -23,4 +23,4 @@ Now, what if you want to generate a million sequences of a million random number
 
 No way, we want to do better. We want to generate these million sequences with only 10 observations. What if, with just 10 observations, we generate a random function that maps each input in {1, 2, ..., 10^6} to its own random sequence?
 
-A pseudorandom function allows us to generate this random function. And just like with pseudorandom generators, each sequence it produces should be indistinguishable from a truly random sequence. This is the foundation that makes modern encryption practical -- one secret key can generate unlimited independent random sequences for encrypting billions of messages.
+A pseudorandom function allows us to generate this random function. And just like with pseudorandom generators, each sequence it produces should be indistinguishable from a truly random sequence. This is the foundation that makes modern encryption practical -- one secret key can generate unlimited independent random sequences of 0s and 1s for encrypting billions of messages.
