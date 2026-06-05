@@ -25,7 +25,6 @@ We need examples. Let's examine a famous example, the Minimum Vertex Cover probl
 > Given an undirected graph $$G = (V, E)$$, a **vertex cover** is a set $$C \subseteq V$$ such that every edge has at least one endpoint in $$C$$:
 >
 > $$\forall (i, j) \in E, \quad i \in C \text{ or } j \in C.$$
-
 > Output the vertex cover of smallest size.
 
 We are now going for a different formulation of the same problem, what we call the integer programming formulation.
@@ -35,8 +34,8 @@ For every graph vertex $$i \in V$$, define
 $$
 x_i =
 \begin{cases}
-1, & \text{if } i \in C, \\
-0, & \text{if } i \notin C.
+1, & \text{if } i \in C, \text{ i.e. i is in the cover} \\
+0, & \text{if } i \notin C \text{i.e. is not in the cover}.
 \end{cases}
 $$
 
@@ -88,11 +87,9 @@ $$
 |C| \leq 2\,\text{LP}^\star \leq 2\,\text{OPT}.
 $$
 
-Thus the LP-threshold algorithm is a 2-approximation.
+Thus the LP-threshold algorithm is a 2-approximation. Can we do better than 2?
 
-## Can we do better than 2?
-
-A fair question at this point: the factor of 2 came from rounding fractional values up, and our whole bound leaned on $$\text{LP}^\star \leq \text{OPT}$$. Could a cleverer argument squeeze out a factor of, say, 1.5 as 
+The factor of 2 came from rounding fractional values up, and our whole bound leaned on $$\text{LP}^\star \leq \text{OPT}$$. Could a cleverer argument squeeze out a factor of, say, 1.5 as 
 $$
 |C| \leq 1.5\,\text{LP}^\star \leq 1.5\,\text{OPT}.
 $$
