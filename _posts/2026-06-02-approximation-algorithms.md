@@ -10,11 +10,11 @@ Suppose you're carrying a bag, and you want to collect valuable precious stones 
 
 Suppose you're an Uber driver, and you have a series of rides lined up at various locations. You can't take all of them, because your fuel is limited. So you want to choose which rides to take, and in what order to drive them, so that you earn as much as possible without running out of fuel.
 
-All of these are discrete optimization problems. Discrete optimization is the process of finding the best possible solution from a set of distinct options. Note the word *distinct*. Either you choose the option or you don't. No half an option, quarter an option and so on, therefore the word *discrete*.
+All of these are discrete optimization problems. Discrete optimization is the process of finding the best possible solution from a set of distinct options. Note the word *distinct*. Either you choose the option or you don't. No half an option, quarter an option and so on.
 
 Most discrete optimization problems are NP-hard, meaning that there are no efficient algorithms to find optimal aka best solutions to such problems. This means that even if I wait for my entire lifetime, I may not be able to find the set of most valuable stones I can pack into my bag of limited weight. Or find the set of rides that corresponds to my maximum earnings.
 
-Fine, instead of finding the set of *most* valuable stones, can I find the set of *reasonably* valuable stones? Can I find the the set of rides that corresponds to *reasonably high* earnings? In other words, is there an efficient (aka polynomial time) algorithm to find an approximation to the optimal solution instead? And can I quantify this approximation with a quantity called $$\alpha$$? If I'm trying to maximize something, the algorithm would find a solution that's *at least* $$\alpha$$ times the optimal solution. If I'm trying to minimize something, the algorithm would find a solution that's *at most* $$\alpha$$ times the optimal solution.
+Fine, instead of finding the set of *most* valuable stones, can I find the set of *reasonably* valuable stones? Can I find the set of rides that corresponds to *reasonably high* earnings? In other words, is there an efficient (aka polynomial time) algorithm to find an approximation to the optimal solution instead? And can I quantify this approximation with a quantity called $$\alpha$$? If I'm trying to maximize something, the algorithm would find a solution that's *at least* $$\alpha$$ times the optimal solution. If I'm trying to minimize something, the algorithm would find a solution that's *at most* $$\alpha$$ times the optimal solution.
 
 With this intuition, let's define an approximation algorithm.
 
@@ -97,7 +97,7 @@ $$
 |C| \leq 1.5\,\text{LP}^\star \leq 1.5\,\text{OPT}.
 $$
 
- It turns out the answer is *no, not with this LP*, the $$|C|$$ obtained by the rounding algorithm on this relaxed LP can actually be $$1/2.OPT$$.
+It turns out the answer is *no, not with this LP*, the $$\text{LP}^\star$$ of this relaxed LP can actually be $$\tfrac{1}{2}\,\text{OPT}$$.
 
 Consider the **complete graph** $$K_n$$, where every pair of vertices is joined by an edge. We compute two things.
 
