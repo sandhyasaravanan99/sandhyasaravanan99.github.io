@@ -1,4 +1,9 @@
-# Basic Information 
+# Markdown / math rendering
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
+# Basic Information
 title: Sandhya Saravanan
 position: PhD Student
 affiliation: University of California, Santa Cruz
