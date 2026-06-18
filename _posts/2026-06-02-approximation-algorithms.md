@@ -120,6 +120,4 @@ $$
 \frac{\text{OPT}}{\text{LP}^\star} \geq \frac{n - 1}{n/2} = 2 - \frac{2}{n},
 $$
 
-which approaches 2 as $$n \to \infty$$. This worst-case ratio $$\text{OPT}/\text{LP}^\star$$ is called the **integrality gap** of the relaxation, and for vertex cover it equals 2. To genuinely beat 2, you'd need a *stronger* relaxation than this LP — which is exactly where semidefinite programming and problems like Max-Cut enter the story, which we shall cover in the next post.
-
-Apologetic Note. I wrote this more for myself, and less for you, sorry about that, this was a super new area for me as well. The next time I'll revisit this, I hope to have more intuition and simplicity in this post.
+which approaches 2 as $$n \to \infty$$. This worst-case ratio $$\text{OPT}/\text{LP}^\star$$ is called the **integrality gap** of the relaxation, and for vertex cover it equals 2. TLDR: We can't do better than 2 yet.
