@@ -41,7 +41,7 @@ Then finding the vertex cover of smallest size is equivalent to minimizing $$\su
 
 We could just set $$x_i$$ for all vertices $$i$$ to be 0 then to minimize $$\sum_{i \in V} x_i$$. But no, we can't do that. We have a constraint: at least one endpoint of each edge is chosen. Mathematically, this translates to $$x_i + x_j \geq 1, \forall (i, j) \in E$$.
 
-We have all the ingredients for our integer programming formulation now which is as follows. Remember we are solving for $$x = (x_1, x_2, \dots, x_{|V|})$$, and the optimal solution is $$(x_1, x_2, \dots, x_{|V|}) = (x_1^\star, x_2^\star, \dots, x_{|V|}^\star)$$
+We have all the ingredients for our integer programming formulation now which is as follows. Remember we are solving for $$x = (x_1, x_2, \dots, x_{\lvert V\rvert})$$, and the optimal solution is $$(x_1, x_2, \dots, x_{\lvert V\rvert}) = (x_1^\star, x_2^\star, \dots, x_{\lvert V\rvert}^\star)$$
 
 $$
 \begin{aligned}
@@ -85,7 +85,7 @@ Since the solution to the LP relaxation is smaller than or equal to the solution
 
 Let's give this some notation, so that it's easier to understand the textbook language if you were to refer a textbook after reading this post.
 
-We refer to solution to the LP relaxation as $$\text{LP}^\star$$.  The optimal solution, in other words, the solution to the integer programming solution is $$OPT$$. And the size of the minimum vertex cover is $$|C|$$. So
+We refer to solution to the LP relaxation as $$\text{LP}^\star$$.  The optimal solution, in other words, the solution to the integer programming solution is $$OPT$$. And the size of the minimum vertex cover is $$\lvert C\rvert$$. So
 
 $$
 |C| \leq 2\,\text{LP}^\star \leq 2\,\text{OPT}.
