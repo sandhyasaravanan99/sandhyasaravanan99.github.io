@@ -39,7 +39,7 @@ $$
 
 Then finding the vertex cover of smallest size is equivalent to minimizing $$\sum_{i \in V} x_i$$. Take a moment to see that.
 
-We could just set $$x_i$$ for all vertices $$i$$ to be 0 then to minimize $$\sum_{i \in V} x_i$$. But no, we can't do that. We have a constraint: at least one endpoint of each edge is chosen. Mathematically, this translates to $$x_i + x_j \geq 1, & \forall (i, j) \in E$$.
+We could just set $$x_i$$ for all vertices $$i$$ to be 0 then to minimize $$\sum_{i \in V} x_i$$. But no, we can't do that. We have a constraint: at least one endpoint of each edge is chosen. Mathematically, this translates to $$x_i + x_j \geq 1, \forall (i, j) \in E$$.
 
 We have all the ingredients for our integer programming formulation now which is as follows. Remember we are solving for $$x = (x_1, x_2, \dots, x_{|V|})$$, and the optimal solution is $$(x_1, x_2, \dots, x_{|V|}) = (x_1^\star, x_2^\star, \dots, x_{|V|}^\star)$$
 
