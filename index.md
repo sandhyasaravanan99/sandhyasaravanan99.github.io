@@ -22,7 +22,7 @@ Prior to joining MSR, I spent two years at Microsoft, Bengaluru as a Software De
 
 ## Blog
 
-I occasionally write short notes on research, engineering, and things I am learning.
+Some scribbles related to research, engineering, and things I am learning.
 
 <a class="blog-link" href="/blog/">Read the blog</a>
 

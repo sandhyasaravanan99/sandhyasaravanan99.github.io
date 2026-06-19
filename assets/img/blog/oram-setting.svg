@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 230" width="620" height="230" role="img" aria-label="A trusted client (drawn as a stick figure) sends a query to an untrusted server holding encrypted data, and receives the data corresponding to the query.">
+  <style>
+    svg { --ink: #2c3e50; font-family: 'Caveat', 'Comic Sans MS', cursive; }
+    @media (prefers-color-scheme: dark) { svg { --ink: #e8e8e8; } }
+    .ink   { fill: var(--ink); }
+    .line  { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .green { fill: #2e9e4f; }
+    .red   { fill: #e5534b; }
+  </style>
+
+  <!-- Client side -->
+  <text class="ink"   x="85" y="30" text-anchor="middle" font-size="34">Client</text>
+  <text class="green" x="85" y="58" text-anchor="middle" font-size="22">Trusted</text>
+
+  <!-- Client stick figure -->
+  <circle class="line" cx="85" cy="92" r="13"/>
+  <line   class="line" x1="85" y1="105" x2="85" y2="148"/>
+  <line   class="line" x1="60" y1="122" x2="110" y2="122"/>
+  <line   class="line" x1="85" y1="148" x2="68" y2="175"/>
+  <line   class="line" x1="85" y1="148" x2="102" y2="175"/>
+
+  <!-- Server side -->
+  <text class="red"  x="505" y="30" text-anchor="middle" font-size="24">Untrusted</text>
+  <text class="ink"  x="505" y="64" text-anchor="middle" font-size="34">Server</text>
+  <rect class="line" x="438" y="82" width="135" height="100" rx="5"/>
+  <text class="ink"  x="505" y="128" text-anchor="middle" font-size="24">Encrypted</text>
+  <text class="ink"  x="505" y="156" text-anchor="middle" font-size="24">data</text>
+
+  <!-- Query arrow: client -> server -->
+  <text class="ink" x="290" y="102" text-anchor="middle" font-size="24">Query</text>
+  <line     class="line" x1="160" y1="118" x2="420" y2="118"/>
+  <polyline class="line" points="408,111 421,118 408,125"/>
+
+  <!-- Response arrow: server -> client -->
+  <line     class="line" x1="420" y1="162" x2="160" y2="162"/>
+  <polyline class="line" points="172,155 159,162 172,169"/>
+  <text class="ink" x="290" y="198" text-anchor="middle" font-size="24">Data corresponding to query</text>
+</svg>

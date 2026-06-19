@@ -12,7 +12,7 @@ Suppose you're an Uber driver, and you have a series of rides lined up at variou
 
 All of these are discrete optimization problems. Discrete optimization is the process of finding the best possible solution from a set of distinct options. Note the word *distinct*. Either you choose the option or you don't. No half an option, quarter an option and so on.
 
-Most discrete optimization problems are "NP-hard", meaning that there are no efficient algorithms to find optimal aka best solutions to such problems. This means that even if I wait for my entire lifetime, I may not be able to find the set of most valuable stones I can pack into my bag of limited weight. Or find the set of rides that corresponds to my maximum earnings.
+Many discrete optimization problems are "NP-hard", meaning we know of no *efficient* algorithm to find the optimal aka best solution, one whose running time stays manageable as the input grows. The methods we do have blow up exponentially with the input size: fine for a handful of stones or rides, but as the number grows, the time to find the *exact* optimum explodes. Past a certain size, I could wait my entire lifetime and still not have the most valuable set of stones I can pack into my bag of limited weight, or the set of rides that corresponds to my maximum earnings.
 
 Fine, instead of finding the set of *most* valuable stones, can I find the set of *reasonably* valuable stones? Can I find the set of rides that corresponds to *reasonably high* earnings? In other words, is there an efficient (aka polynomial time) algorithm to find an approximation to the optimal solution instead? And can I quantify this approximation with a quantity called $$\alpha$$? If I'm trying to maximize something, the algorithm would find a solution that's *at least* $$\alpha$$ times the optimal solution. If I'm trying to minimize something, the algorithm would find a solution that's *at most* $$\alpha$$ times the optimal solution.
 
@@ -98,7 +98,7 @@ $$
 |C| \leq 1.5\,\text{LP}^\star \leq 1.5\,\text{OPT}.
 $$
 
-It turns out the answer is *no, not with this LP*, the $$\text{LP}^\star$$ of this relaxed LP can actually be $$\tfrac{1}{2}\,\text{OPT}$$.
+It turns out the answer is *no, not with this LP* as we see below.
 
 Consider the **complete graph** $$K_n$$, where every pair of vertices is joined by an edge. We compute two things.
 
@@ -120,4 +120,14 @@ $$
 \frac{\text{OPT}}{\text{LP}^\star} \geq \frac{n - 1}{n/2} = 2 - \frac{2}{n},
 $$
 
-which approaches 2 as $$n \to \infty$$. This worst-case ratio $$\text{OPT}/\text{LP}^\star$$ is called the **integrality gap** of the relaxation, and for vertex cover it equals 2. TLDR: We can't do better than 2 yet.
+which approaches 2 as $$n \to \infty$$. This worst-case ratio $$\text{OPT}/\text{LP}^\star$$ is called the **integrality gap** of the relaxation, and for vertex cover it equals 2. Notice, that since $$x_i = \tfrac12 \, \forall{i \in V}$$, we have $$\lvert C \rvert = LP^\star$$ (every 1/2 is rounded up to 1). So
+
+$$
+|C| = 2\,\text{LP}^\star \leq 2\,\text{OPT}.
+$$
+
+This example shows that we can't prove something on the lines of
+
+$$
+|C| \leq 1.5\,\text{LP}^\star \leq 1.5\,\text{OPT}.
+$$
