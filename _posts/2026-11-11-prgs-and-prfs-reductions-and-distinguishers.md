@@ -14,7 +14,7 @@ You're given a generator algorithm. Is it a pseudorandom generator? Do you know 
 - Part 3: You're given a keyed function. Is it a pseudorandom function? Do you know when to say no?
 - Part 4: You're given a keyed function. Is it a pseudorandom function? Do you know when to say yes?
 
-For this blog post, we're going to solve the following question from Katz and Lindell's "Modern Cryptography":
+For this blog post, we're going to solve the following question from Katz and Lindell's "Introduction to Modern Cryptography":
 
 ![Katz and Lindell exercise: define G(s) as s concatenated with s; describe and analyze an attack showing that G is not a pseudorandom generator](/assets/img/blog/prgs-prfs/image-4.png)
 
