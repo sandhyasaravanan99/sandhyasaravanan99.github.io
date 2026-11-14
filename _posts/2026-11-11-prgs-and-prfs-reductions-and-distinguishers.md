@@ -10,7 +10,7 @@ In my [previous post]({% post_url 2026-03-29-pseudorandom-generators-and-pseudor
 
 You're given a generator algorithm. Is it a pseudorandom generator? Do you know when to say no? The next series of posts will be:
 
-- Part 2: You're given a generator algorithm. Is it a pseudorandom generator? Do you know when to say yes?
+- [Part 2: You're given a generator algorithm. Is it a pseudorandom generator? Do you know when to say yes?]({% post_url 2026-11-13-prgs-and-prfs-part-2 %})
 - Part 3: You're given a keyed function. Is it a pseudorandom function? Do you know when to say no?
 - Part 4: You're given a keyed function. Is it a pseudorandom function? Do you know when to say yes?
 
