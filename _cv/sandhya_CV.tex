@@ -1,0 +1,261 @@
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.3 (29/10/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[13pt, a4paper, roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{graphicx}
+\usepackage[scale=0.86]{geometry} % Reduce document margins
+\setlength{\hintscolumnwidth}{2cm } % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+% \usepackage{mathpazo}
+% \renewcommand{\sfdefault}{ppl}
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Sandhya} % Your first name
+\familyname{Saravanan} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+% \title{Curriculum Vitae}
+% \address{123 Broadway}{City, State 12345}
+%\mobile{+91 9840580240}
+% \phone{(000) 111 1112}
+% \fax{(000) 111 1113}
+\homepage{sandhyasaravanan99.github.io}{\textcolor{link}{sandhyasaravanan99.github.io}}
+\email{ssarav13@ucsc.edu}
+
+
+ % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+% \extrainfo{additional information}
+% \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+% \quote{"A witty and playful quotation" - John Smith}
+\definecolor{link}{rgb}{0.0,0.3,0.9}
+\definecolor{highlight}{rgb}{0.9,0.2,0}
+\patchcmd{\section}{0.95ex}{1.5ex}{}{}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	CURRICULUM VITAE
+%----------------------------------------------------------------------------------------
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\vspace{-3mm}
+\section{Education}
+
+\cventry{2025--Present}{University of California, Santa Cruz}{}
+{
+\newline{} \textsc{PhD Computer Science} 
+\newline{}CGPA: \textbf{4.0}/4.0
+\newline{} \textbf{Research Areas}: Blockchain Security, Searchable Encryption, Oblivious Computation, Multi-Party Computation
+}
+{}
+{
+\textbf{Courses}: Cryptography, Analysis of Algorithms, Private Computation on Encrypted Data, Modern Algorithmic Toolbox, Network Security, Principles of Database Systems}
+
+\cventry{2017--2021}{National Institute of Technology, Tiruchirappalli}{}
+{
+\newline{} \textsc{B.Tech Computer Science} 
+\newline{}CGPA: \textbf{8.66}/10
+}
+{}
+{}
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+% One \cventry per research role, newest first:
+% \cventry{<dates>}{<institution>}{}{}{}{\textsc{<role>} \newline{}\textbf{Advisor}: <name> \begin{itemize} \item ... \end{itemize}}
+%   - the three empty {} are unused fields; keep them so the description lands in the right place
+%   - one \item per project: what you did, how, and what came of it (numbers only where real)
+%   - point to the paper (e.g. Publication 1) instead of listing collaborators
+% SAMPLE CONTENT: replace everything in [brackets] before publishing.
+
+\section{Research Experience}
+
+\cventry{2025--Present}{University of California, Santa Cruz}{}{}{}
+{\textsc{Graduate Student Researcher}
+\newline{}\textbf{Advisor}: Prof. Ioannis Demertzis
+\begin{itemize}
+\item \textbf{Leakage Analysis of Blockchain RPC Providers}: Showed that centralized RPC providers (the infrastructure most wallets and decentralized applications rely on to reach the blockchain) create a critical privacy bottleneck. Defined a leakage framework capturing what providers learn from each wallet query, surveyed the top 200 RPC services (only one hides users' IP by default), and demonstrated that no existing defense fully prevents deanonymization, censorship, or MEV attacks. Poster at NorCal DB Day 2026; \emph{under submission} (Publication 1).
+\item \textbf{Oblivious Range Queries on Blockchain Indices}: RPC providers offering enriched APIs (token balances, event logs, transaction histories) maintain queryable indices of on-chain state, motivating efficient private range queries over encrypted databases. Existing schemes are either impractically slow or vulnerable to database reconstruction attacks; designing a construction that navigates this tradeoff. \emph{In preparation.}
+\end{itemize}}
+
+\vspace{2mm}
+\cventry{2023--2025}{Microsoft Research, Bangalore}{}{}{}
+{\textsc{Research Fellow}
+\newline{}\textbf{Advisors}: Dr. Divya Gupta, Dr. Nishanth Chandran
+\begin{itemize}
+\item Implemented an MPC protocol for privacy-preserving decision tree training with the \textbf{EzPC} team, reducing communication complexity over prior work and achieving ${\sim}10{\times}$ lower communication and ${\sim}9{\times}$ speedup over the state of the art in MP-SPDZ. (Publication 2)
+\end{itemize}}
+
+\vspace{2mm}
+\cventry{2020--2021}{Indian Institute of Science, Bangalore}{}{}{}
+{\textsc{Research Intern}, CrIS Lab
+\begin{itemize}
+\item Implemented Secure Multiparty Computation (SMPC) protocols from \textcolor{link}{\href{https://eprint.iacr.org/2019/429.pdf}{\textbf{Astra}}} in C++ using primitives from \textcolor{link}{\href{https://github.com/ladnir/aby3}{\textbf{ABY3}}}.
+\item Analyzed and benchmarked custom SMPC friendly sigmoid functions for logistic regression and simple neural networks against \textcolor{link}{\href{https://github.com/data61/MP-SPDZ}{MP-SPDZ}}.
+\end{itemize}}
+
+% \section{Masters Thesis}
+
+% \cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
+% \cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
+% \cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Publications}
+
+\cvitem{1}
+{
+\underline{Sandhya Saravanan}, Nihal Talur, Ioannis Demertzis, Dimitris Mouris. ``\textbf{SoK: Blockchain RPCs - Centralized Gateways to a Decentralized Network}''. \newline{}\textcolor{link}{\href{https://idemertzis.com/Papers/SoK_RPC.pdf}{Paper \ExternalLink}}, \emph{Under submission, \textcolor{highlight}{Poster at NorCal DB Day 2026}}
+}
+
+\cvitem{2}
+{
+Divyanshu Bhardwaj, \underline{Sandhya Saravanan}, Nishanth Chandran, Divya Gupta. ``\textbf{Securely Training Decision Trees Efficiently}''. 31st ACM Conference on Computer and Communications Security (CCS) \newline{}\textcolor{link}{{\href{https://eprint.iacr.org/2024/1077}{Paper \ExternalLink}}, \textcolor{highlight}{ACM CCS 2024}}
+}
+
+%----------------------------------------------------------------------------------------
+%	INDUSTRY EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Industry Experience}
+
+\cventry{2021--2023}{Microsoft, India}{}{}{}
+{\textsc{Software Developer}
+\newline{}
+Backend development of actionable messages and connectors integrated into Outlook and Teams.}
+
+\vspace{2mm}
+\cventry{\hspace{-0.3cm}Summer 2020}{Microsoft, India}{}{}{}
+{\textsc{Software Developer Intern}
+\newline{}
+Built a Power BI dashboard to enable cost optimization on Azure using Azure Databricks.}
+
+% \vspace{2mm}
+% \cventry{2018-2021}
+% {Delta Force, NIT Trichy}
+% {}
+% {}
+% {}
+% {\textsc{Core Member and System Administrator} \newline{} Problem setting and platform setup of Applied Cryptography challenges for Capture the Flag contests as a member of the university programming club.}
+
+% \vspace{2mm}
+% \cventry
+% {Winter 2018}
+% {Indian Institute of Technology, Madras}
+% {}
+% {}
+% {}
+% {\textsc{Research Intern}, Biomedical Engineering Lab
+% \newline{}
+% Implemented lung field segmentation using Convolution Neural Networks (CNNs).}
+
+%----------------------------------------------------------------------------------------
+%	Publication
+%----------------------------------------------------------------------------------------
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Honors and Awards}
+
+\cvitem{2026}{\textbf{Graduate Dean's Travel Grant}, UC Santa Cruz, for attending the IEEE Symposium on Security and Privacy (S\&P).}
+\cvitem{2025}{\textbf{Regents Fellowship}, UC Santa Cruz, a merit fellowship awarded to incoming graduate students on department nomination.}
+\cvitem{2022}{Runner up in \textbf{Cloud CTF}, an Azure Cloud ethical hacking contest, Microsoft. }
+\cvitem{2022}{Top 5 in \textbf{Contoso Skate and Contoso Financial CTF}, a web hacking contest, Microsoft.}
+\cvitem{2020}{Finalist in \textbf{Smart India Hackathon}, a nationwide government-funded hackathon.}
+\cvitem{2018}{Top 10 in \textbf{InCTF}, India's first Attack Defence Capture the Flag.}
+\cvitem{2013-17}{Top 250 in India to qualify for \textbf{Indian National Olympiad of Informatics (INOI)}.} 
+\cvitem{2016}{Top 300 in India to qualify for \textbf{Indian National Mathematical Olympiad (INMO)}.}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Technical Skills}
+
+\cvitemwithcomment{}{C++, Python, C\#}{Programming Languages}
+\cvitemwithcomment{}{MP-SPDZ, \LaTeX{}, Linux, Git}{Tools and Systems}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+% \section{Communication Skills}
+
+% \cvitem{2010}{Oral Presentation at the California Business Conference}
+% \cvitem{2009}{Poster at the Annual Business Conference in Oregon}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Academic Service and Extracurricular Activities}
+\cvitem{$\bullet$}{\textbf{Teaching Assistant}, UCSC: Algorithmic Foundations of Cryptography, Applied Discrete Mathematics.}
+\cvitem{$\bullet$}{\textbf{Women Inclusivity Network}, NIT Trichy: Co-founded a community of female students and alumni of NIT Trichy that aims to improve the representation of women in STEM fields.}
+\cvitem{$\bullet$}{\textbf{Teach for India}: As a volunteer, developed \textcolor{link}{\href{https://workgen.org}{workgen.org}}, an educational tool to automate question paper generation, with the goal of minimizing the gap in quality of teachers between cities and rural areas.}
+\cvitem{$\bullet$}{Actively contributed to promoting coding culture on-campus by organizing hackathons, CTFs, programming contests and  workshops for the student community as a member of Delta Force, NIT Trichy.}
+% \cvitem{$\bullet$}{Actively promoted events across music, arts, English lits and dramatics clusters for the annual cultural fest of NIT Trichy.}
+% \cvitem{$\bullet$}{Trained in Carnatic music vocals and Western keyboard.}
+
+% \cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
+
+
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+% \section{Interests}
+
+% \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+% \cvlistdoubleitem{Music}
+% \cvlistdoubleitem{Cooking}
+% \cvlistitem{Running}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

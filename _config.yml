@@ -11,9 +11,9 @@ email: ssarav13 (at) ucsc (dot) edu
 
 # Search Engine Optimization (SEO)
 url: https://sandhyasaravanan99.github.io
-keywords: minimal light
+keywords: cryptography, blockchain, privacy, searchable encryption, oblivious storage, secure multi-party computation, applied cryptography
 canonical: https://sandhyasaravanan99.github.io/
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
+description: PhD student in Applied Cryptography at UC Santa Cruz, working on blockchain privacy, searchable encryption, and oblivious storage.
 
 # The option is used to enable the MPI Informatics template.
 #enable_mpi_logo: true
@@ -22,7 +22,7 @@ description: The Minimal Light is a simple and elegant jekyll theme for academic
 #enable_last_update: false
 
 # Links
-google_scholar: https://scholar.google.com/citations?authuser=1&user=oCWbckYAAAAJ
+google_scholar: https://scholar.google.com/citations?user=oCWbckYAAAAJ
 cv_link: assets/files/sandhya_CV.pdf
 github_link: https://github.com/sandy9999
 linkedin: https://www.linkedin.com/in/sandhyasaravanan/

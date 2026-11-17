@@ -1,0 +1,7 @@
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+sandhya_CV.pdf
+preview/

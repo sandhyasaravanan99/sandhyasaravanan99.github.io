@@ -10,13 +10,14 @@ Earlier, I was a Research Fellow in the EzPC group, the cryptography wing of Mic
 
 Prior to joining MSR, I spent two years at Microsoft, Bengaluru as a Software Developer, where I did backend development of Actionable Messages and Connectors, integrated into Outlook and Teams. I graduated in 2021 with a B.Tech in Computer Science and Engineering.
 
+**I am actively looking for research internship opportunities for Summer 2027.**
+
 ## Research Interests
 
-- Applied Cryptography
-- Security
-- Blockchains
-- Secure Multi-Party Computation
-- Privacy-preserving Systems
+- **Blockchain Security**: Privacy and centralization risks in blockchain infrastructure, with a focus on RPC providers.
+- **Searchable Encryption**: Encrypted databases that support efficient queries while keeping query contents hidden from the data host.
+- **Oblivious Computation**: Algorithms and protocols that prevent software side-channel leakage such as access patterns, even when the underlying data is encrypted.
+- **Multi-Party Computation**: Protocols enabling joint computation over private inputs held by multiple parties.
 
 {% include_relative _includes/publications.md %}
 
