@@ -6,7 +6,7 @@ math: true
 
 You're given a keyed function. Is it a pseudorandom function? Do you know when to say no?
 
-In [Part 1]({% post_url 2026-11-11-prgs-and-prfs-reductions-and-distinguishers %}), we were asking the same question about generators. Now we're asking it about functions. We're going to solve constructions 1, 3, and 4 of the following exercise from Katz and Lindell's "Introduction to Modern Cryptography":
+In [Part 1]({% post_url 2026-11-11-prgs-and-prfs-reductions-and-distinguishers %}), we were asking the same question about generators. Now we're asking it about functions. We're going to solve exercises 1, 3, and 4 of the following question from Katz and Lindell's "Introduction to Modern Cryptography":
 
 ![Katz and Lindell Exercise 3.11: given a length-preserving PRF F, decide whether F' is a PRF for four constructions of F' from key space {0,1}^n and input space {0,1}^(n-1) to {0,1}^(2n)](/assets/img/blog/prgs-prfs/image.png)
 
@@ -20,7 +20,7 @@ What is a truly random function? A truly random function $$f: \{0,1\}^n \rightar
 
 So now that we understand what a truly random function is, how do we formalize this notion of "looks like" the output of a truly random function?
 
-What we want to say that $$F_k(x)$$ is indistinguishable from $$f(x)$$ for every $$x$$ where $$f$$ is a truly random function on the same domain and codomain (both $$n$$-bit strings here). The distinguisher here is an efficient algorithm (if thought of as a person, remember the person's reasoning to distinguish can also be captured in an algorithm). Let's formalize this notion.
+What we want to say is that $$F_k$$ is indistinguishable from $$f$$, where $$f$$ is a truly random function on the same domain and codomain (both $$n$$-bit strings here), even when the distinguisher gets to see outputs on many inputs of its choice. The distinguisher here is an efficient algorithm (if thought of as a person, remember the person's reasoning to distinguish can also be captured in an algorithm). Let's formalize this notion.
 
 Unlike in PRGs, the PRF-distinguisher is a little more powerful. In case of PRGs, the distinguisher was just given a random-looking string and asked to guess whether it was a random string or a PRG output. In case of PRFs, the distinguisher gets to make queries: they pick any inputs $$x_1, x_2, \dots, x_q$$ they want (polynomially many, since the distinguisher is efficient) and get the outputs. They then have to decide whether these were outputs of $$F_k$$ (for some fixed but unknown key $$k$$) or the outputs of a truly random function $$f$$.
 
@@ -41,7 +41,7 @@ Pop quiz time. For all our exercises, $$F$$ is a **length-preserving** PRF. So $
 
 ---
 
-**Construction 1**: $$F'_k(x) = F_k(0 \| x) \| F_k(0 \| x)$$. Here, $$F_k$$ is given to be a PRF. Is $$F'_k$$ a PRF?
+**Exercise 1**: $$F'_k(x) = F_k(0 \| x) \| F_k(0 \| x)$$. Here, $$F_k$$ is given to be a PRF. Is $$F'_k$$ a PRF?
 
 For $$F'_k$$ to be a PRF, $$F'_k(x)$$ should be indistinguishable from $$f(x)$$ where $$f$$ is a truly random function. $$f(x)$$ is a uniformly random $$2n$$-bit string. But $$F'_k(x)$$ seems to have a pattern. The left half of the output is equal to the right half! Surely this can't be the output of a truly random function!
 
@@ -64,7 +64,7 @@ This is not negligible. $$F'$$ is **not a PRF**.
 
 ---
 
-**Construction 3**: $$F'_k(x) = F_k(0 \| x) \| F_k(x \| 0)$$
+**Exercise 3**: $$F'_k(x) = F_k(0 \| x) \| F_k(x \| 0)$$
 
 Found any pattern in $$F'_k$$ yet? The left half = right half trick won't work anymore, the two halves now use different inputs: $$0\|x$$ (prepend a 0) and $$x\|0$$ (append a 0). Both are $$n$$-bit strings. Really no pattern? Remember the PRF-distinguisher is more powerful than the PRG-distinguisher. The pattern might not exist in general, but it might exist for *some* x. Let's check: is there any $$x$$ where $$0\|x = x\|0$$?
 
@@ -93,7 +93,7 @@ Not negligible. $$F'$$ is **not a PRF**.
 
 ---
 
-**Construction 4**: $$F'_k(x) = F_k(0 \| x) \| F_k(x \| 1)$$
+**Exercise 4**: $$F'_k(x) = F_k(0 \| x) \| F_k(x \| 1)$$
 
 The pattern of left half = right half may not exist in general, but we ask again, does it exist for *some* x? Can $$0\|x = x\|1$$ for some $$x$$?
 
