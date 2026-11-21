@@ -20,7 +20,7 @@ What is a truly random function? A truly random function $$f: \{0,1\}^n \rightar
 
 So now that we understand what a truly random function is, how do we formalize this notion of "looks like" the output of a truly random function?
 
-What we want to say is the output of $$F_k(x)$$ is indistinguishable from the output of a truly random function defined on the same domain and codomain (both $$n$$-bit strings here). The distinguisher here is an efficient algorithm (if thought of as a person, remember the person's reasoning to distinguish can also be captured in an algorithm). Let's formalize this notion.
+What we want to say that $$F_k(x)$$ is indistinguishable from $$f(x)$$ for every $$x$$ where $$f$$ is a truly random function on the same domain and codomain (both $$n$$-bit strings here). The distinguisher here is an efficient algorithm (if thought of as a person, remember the person's reasoning to distinguish can also be captured in an algorithm). Let's formalize this notion.
 
 Unlike in PRGs, the PRF-distinguisher is a little more powerful. In case of PRGs, the distinguisher was just given a random-looking string and asked to guess whether it was a random string or a PRG output. In case of PRFs, the distinguisher gets to make queries: they pick any inputs $$x_1, x_2, \dots, x_q$$ they want (polynomially many, since the distinguisher is efficient) and get the outputs. They then have to decide whether these were outputs of $$F_k$$ (for some fixed but unknown key $$k$$) or the outputs of a truly random function $$f$$.
 
